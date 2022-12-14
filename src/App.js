@@ -35,6 +35,7 @@ function App() {
         <Navbar />
         <ScrollToTop />
         <Routes>
+        <Router basename={process.env.PUBLIC_URL}>
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
           <Route path="/EducationCard" element={<About />} />

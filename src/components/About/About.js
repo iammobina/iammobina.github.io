@@ -6,6 +6,9 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
+import EducationCard from "./EducationCard";
+import InterestsCard from "./InterestsCard";
+import Language from "./Language";
 
 function About() {
   return (
@@ -22,17 +25,65 @@ function About() {
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
+              Know Who <strong className="purple">Mobina Kashaniyan</strong> is
             </h1>
             <Aboutcard />
           </Col>
+            {/*<Col*/}
+            {/*  md={5}*/}
+            {/*  style={{ paddingTop: "120px", paddingBottom: "50px" }}*/}
+            {/*  className="about-img"*/}
+            {/*>*/}
+            {/*  <img src={laptopImg} alt="about" className="img-fluid" />*/}
+            {/*</Col>*/}
           <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
+              md={7}
+              style={{
+                justifyContent: "center",
+                paddingTop: "30px",
+                paddingBottom: "50px",
+              }}
           >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+                <strong className="purple"> Education</strong>
+            </h1>
+            <EducationCard />
           </Col>
+
+            <Col
+                md={7}
+                style={{
+                    justifyContent: "center",
+                    paddingTop: "30px",
+                    paddingBottom: "50px",
+                }}
+            >
+                <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+                    <strong className="purple"> Language</strong>
+                </h1>
+                <Language />
+            </Col>
+
+
+
+
+            <Col
+                md={7}
+                style={{
+                    justifyContent: "center",
+                    paddingTop: "30px",
+                    paddingBottom: "50px",
+                }}
+            >
+                <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+                    <strong className="purple"> Interests</strong>
+                </h1>
+                <InterestsCard />
+            </Col>
+
+
+
+
         </Row>
         <h1 className="project-heading">
           Professional <strong className="purple">Skillset </strong>

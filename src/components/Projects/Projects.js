@@ -1,96 +1,98 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import {Container, Row, Col} from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import leaf from "../../Assets/Projects/fam.png";
+import emotion from "../../Assets/Projects/wdot.png";
+import editor from "../../Assets/Projects/sn.png";
+import chatify from "../../Assets/Projects/alph.png";
+import suicide from "../../Assets/Projects/cham.png";
+import bitsOfCode from "../../Assets/Projects/tras.png";
 
 function Projects() {
-  return (
-    <Container fluid className="project-section">
-      <Particle />
-      <Container>
-        <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
-        </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
-            />
-          </Col>
+    return (
+        <Container fluid className="project-section">
+            <Particle/>
+            <Container>
+                <h1 className="project-heading">
+                    My Recent <strong className="purple">Works </strong>
+                </h1>
+                <p style={{color: "white"}}>
+                    Here are a few projects I've worked on recently.
+                </p>
+                <Row style={{justifyContent: "center", paddingBottom: "10px"}}>
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={chatify}
+                            isBlog={false}
+                            title="Persian-Arabic Handwritten Optical Character Recognition"
+                            description="
+                            Converting Persian texts form images to text is always one of the common challenges. This challenge will be much more difficult when the text is handwritten, because the complexity and variety of handwritten texts is much greater than typed texts. This repository contains my thesis project concerning the classification of Arabic handwritten characters, as well as Persian handwritten characters."
+                            ghLink="https://github.com/iammobina/Handwritten-Recognition"
+                            // demoLink="https://chatify-49.web.app/"
+                        />
+                    </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
-            />
-          </Col>
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={bitsOfCode}
+                            isBlog={false}
+                            title="Arabic-Persian Machine Tranlsation"
+                            description="Machine translation is the translation of a text from one natural language into another natural language without human intervention and is completely automatic by computer. This repository contains, I'm trying to implement a machine translation system."
+                            ghLink="https://github.com/iammobina/Machine-Translation"
+                            // demoLink="https://blogs.soumya-jit.tech/"
+                        />
+                    </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={editor}
+                            isBlog={false}
+                            title="Snake Game with Reinforcement Learning"
+                            description=" Snake is a game where the agent must maneuver a line which grows in length each time food is touched by the head of the segment. The line follows the previous paths taken which eventually become obstacles for the agent to avoid. In This repository, Snake game is implemented with Q-learning."
+                            ghLink="https://github.com/iammobina/Snake-Reinforcement-Learning"
+                            // demoLink="https://editor.soumya-jit.tech/"
+                        />
+                    </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={leaf}
+                            isBlog={false}
+                            title="Artists Face Recognition"
+                            description="This repository contains an artist face recognition system. There are two categories of problems with this face recognition system, face verification, and face recognition and both of them are matching problems."
+                            ghLink="https://github.com/iammobina/Artists-Recognition"
+                            // demoLink="https://plant49-ai.herokuapp.com/"
+                        />
+                    </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={suicide}
+                            isBlog={false}
+                            title="Chameleon"
+                            description="This game is inspired by color switch game in which the player crosses obstacles by changing the color, color switch is my main competitor in this area, but by adding different features to the game, I try to have more advantages than this game and a more attractive environment and Make it more fun."
+                                ghLink="https://github.com/iammobina/Chameleon"
+                            // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+                        />
+                    </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
-        </Row>
-      </Container>
-    </Container>
-  );
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={emotion}
+                            isBlog={false}
+                            title="DoNoghte"
+                            description="
+DoNoghte is a cool intellectual game in the style of casual games that will entertain you for hours. The intellectual game of DoNoghte is basically a kind of dot game that can be a useful intellectual entertainment with its challenging and attractive steps.
+This new game starts in such a way that you have to find those of the same color among the colored dots in each stage and connect them. The more points you have, the more points you get and the faster you finish the stage"
+                                // ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
+                            // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here
+                        />
+                    </Col>
+                </Row>
+            </Container>
+        </Container>
+    );
 }
 
 export default Projects;

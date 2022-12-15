@@ -30,7 +30,7 @@ function App() {
 
   return (
     <Router>
-      <Router basename={process.env.PUBLIC_URL}>
+      {/*<Router basename={process.env.PUBLIC_URL}>*/}
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
@@ -45,7 +45,7 @@ function App() {
         <Footer />
       </div>
     </Router>
-</Router>
+// {/*</Router>*/}
   );
 }
 

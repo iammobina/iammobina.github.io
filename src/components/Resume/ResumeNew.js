@@ -8,8 +8,8 @@ import {Document, Page, pdfjs} from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-const resumeLink =
-  "https://iammobina.github.io/Mobina_Kashaniyan_s_Resume.pdf";
+const resumeLink ="https://iammobina.github.io/static/media/Mobina_Kashaniyan_s_Resume_updated.df7a6e3618b1ae107162.pdf"
+  // "https://iammobina.github.io/Mobina_Kashaniyan_s_Resume.pdf";
 
 function ResumeNew() {
     const [width, setWidth] = useState(1200);
@@ -36,7 +36,7 @@ function ResumeNew() {
 
                 <Row className="resume">
                     <Document file={resumeLink} className="d-flex justify-content-center">
-                        <embed src="https://iammobina.github.io/Mobina_Kashaniyan_s_Resume.pdf" width="100%" height="850px"/>
+                        {/*<embed src="https://iammobina.github.io/static/media/Mobina_Kashaniyan_s_Resume_updated.df7a6e3618b1ae107162.pdf" width="100%" height="550px"/>*/}
                         <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6}/>
                     </Document>
                 </Row>

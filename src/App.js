@@ -30,12 +30,12 @@ function App() {
 
   return (
     <Router>
+      <Router basename={process.env.PUBLIC_URL}>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
         <Routes>
-        <Router basename={process.env.PUBLIC_URL}>
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
           <Route path="/EducationCard" element={<About />} />
@@ -45,6 +45,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+</Router>
   );
 }
 

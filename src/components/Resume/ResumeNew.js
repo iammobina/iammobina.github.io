@@ -35,10 +35,10 @@ function ResumeNew() {
                 </Row>
 
                 <Row className="resume">
-                    <Document file={resumeLink} className="d-flex justify-content-center">
-                        {/*<embed src="https://iammobina.github.io/static/media/Mobina_Kashaniyan_s_Resume_updated.df7a6e3618b1ae107162.pdf" width="100%" height="550px"/>*/}
-                        <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6}/>
-                    </Document>
+                    {/*<Document file={resumeLink} className="d-flex justify-content-center">*/}
+                        <embed src="https://iammobina.github.io/static/media/Mobina_Kashaniyan_s_Resume_updated.df7a6e3618b1ae107162.pdf" width="100%" height="550px"/>
+                        {/*<Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6}/>*/}
+                    {/*</Document>*/}
                 </Row>
 
 

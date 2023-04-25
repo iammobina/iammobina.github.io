@@ -28,26 +28,7 @@ function Home2() {
                             </i>
                             <br/>
                             <br/>
-                            My field of Interest's are building new &nbsp;
-                            <i>
-                                <b className="purple">Machine Learning Applications</b> and
-                                also in areas related to{" "}
-                                <b className="purple">
-                                  Visual Computing </b>and {" "}
-                              <b className="purple">Natural Launguage Processing.
-                                </b>
-                            </i>
-                            <br/>
-                            <br/>
-                            Currently, I am applying to
-                             <b className="purple"> Master's programs </b>
-                            <i>
-                               related to
-                                <b className="purple">
-                                    {" "}
-                                  my interests.
-                                </b>
-                            </i>
+ 
                         </p>
                     </Col>
                     <Col md={4} className="myAvtar">

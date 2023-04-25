@@ -26,9 +26,8 @@ function Projects() {
                             imgPath={chatify}
                             isBlog={false}
                             title="Persian-Arabic Handwritten Optical Character Recognition"
-                            description="
-                            Converting Persian texts form images to text is always one of the common challenges. This challenge will be much more difficult when the text is handwritten, because the complexity and variety of handwritten texts is much greater than typed texts. This repository contains my thesis project concerning the classification of Arabic handwritten characters, as well as Persian handwritten characters."
-                            ghLink="https://github.com/iammobina/Handwritten-Recognition"
+                            description=" In this project, images containg text can be converted to text. This repository contains my thesis project concerning the classification of Arabic handwritten characters, as well as Persian handwritten characters."
+                                                       ghLink="https://github.com/iammobina/Handwritten-Recognition"
                             // demoLink="https://chatify-49.web.app/"
                         />
                     </Col>
@@ -44,27 +43,6 @@ function Projects() {
                         />
                     </Col>
 
-                    <Col md={4} className="project-card">
-                        <ProjectCard
-                            imgPath={editor}
-                            isBlog={false}
-                            title="Snake Game with Reinforcement Learning"
-                            description=" Snake is a game where the agent must maneuver a line which grows in length each time food is touched by the head of the segment. The line follows the previous paths taken which eventually become obstacles for the agent to avoid. In This repository, Snake game is implemented with Q-learning."
-                            ghLink="https://github.com/iammobina/Snake-Reinforcement-Learning"
-                            // demoLink="https://editor.soumya-jit.tech/"
-                        />
-                    </Col>
-
-                    <Col md={4} className="project-card">
-                        <ProjectCard
-                            imgPath={leaf}
-                            isBlog={false}
-                            title="Artists Face Recognition"
-                            description="This repository contains an artist face recognition system. There are two categories of problems with this face recognition system, face verification, and face recognition and both of them are matching problems."
-                            ghLink="https://github.com/iammobina/Artists-Recognition"
-                            // demoLink="https://plant49-ai.herokuapp.com/"
-                        />
-                    </Col>
 
                     <Col md={4} className="project-card">
                         <ProjectCard

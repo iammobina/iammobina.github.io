@@ -33,7 +33,7 @@ function EducationCard() {
 
                                         <ol style={{listStyle: 'disc'}}>
                                             <li>Diploma in Mathematics and Physics Discipline (2013 - 1017)<br/></li>
-                                            <li>Diploma GPA: 4.0</li>
+                                            
                                         </ol>
 
                                     </li>

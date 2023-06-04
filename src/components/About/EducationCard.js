@@ -23,6 +23,7 @@ function EducationCard() {
                                         </ol>
 
                                     </li>
+									  </li>
                                 <li className="about-activity">
                                     <ImPointRight/> <a href="www.iust.ac.ir" style={{textDecoration: 'none'}}> Iran
                                     University of Science and

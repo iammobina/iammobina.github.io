@@ -26,7 +26,7 @@ function Projects() {
                         <ProjectCard
                             imgPath={bitsOfCode}
                             isBlog={false}
-                            title="Arabic-Persian Statical Machine Tranlsation"
+                            title="Arabic-Persian Statistical Machine Tranlsation"
                             description="Statical Machine translation is the translation of a text from one natural language into another natural language without human intervention and is completely automatic by computer. This repository contains, I'm trying to implement a machine translation system."
                             ghLink="https://github.com/iammobina/Machine-Translation"
                             // demoLink="https://blogs.soumya-jit.tech/"

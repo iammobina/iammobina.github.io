@@ -11,6 +11,18 @@ function EducationCard() {
                         <p style={{textAlign: "justify"}}>
 
                             <ul>
+        
+                                        <li className="about-activity">
+                                    <ImPointRight/> <a href="www.iust.ac.ir" style={{textDecoration: 'none'}}> Iran
+                                    University of Science and
+                                    Technology </a>
+                                    <li className="about-activity">
+                                        <ol style={{listStyle: 'disc'}}>
+                                            <li>Master of Science in Computer Engineering (2021 - present)<br/></li>
+                                            <li>Current GPA: 3.77<br/></li>
+                                        </ol>
+
+                                    </li>
                                 <li className="about-activity">
                                     <ImPointRight/> <a href="www.iust.ac.ir" style={{textDecoration: 'none'}}> Iran
                                     University of Science and

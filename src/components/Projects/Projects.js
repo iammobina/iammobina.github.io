@@ -21,23 +21,13 @@ function Projects() {
                     Here are a few projects I've worked on recently.
                 </p>
                 <Row style={{justifyContent: "center", paddingBottom: "10px"}}>
-                    <Col md={4} className="project-card">
-                        <ProjectCard
-                            imgPath={chatify}
-                            isBlog={false}
-                            title="Persian-Arabic Handwritten Optical Character Recognition"
-                            description=" In this project, images containg text can be converted to text. This repository contains my thesis project concerning the classification of Arabic handwritten characters, as well as Persian handwritten characters."
-                                                       ghLink="https://github.com/iammobina/Handwritten-Recognition"
-                            // demoLink="https://chatify-49.web.app/"
-                        />
-                    </Col>
 
                     <Col md={4} className="project-card">
                         <ProjectCard
                             imgPath={bitsOfCode}
                             isBlog={false}
-                            title="Arabic-Persian Machine Tranlsation"
-                            description="Machine translation is the translation of a text from one natural language into another natural language without human intervention and is completely automatic by computer. This repository contains, I'm trying to implement a machine translation system."
+                            title="Arabic-Persian Statical Machine Tranlsation"
+                            description="Statical Machine translation is the translation of a text from one natural language into another natural language without human intervention and is completely automatic by computer. This repository contains, I'm trying to implement a machine translation system."
                             ghLink="https://github.com/iammobina/Machine-Translation"
                             // demoLink="https://blogs.soumya-jit.tech/"
                         />

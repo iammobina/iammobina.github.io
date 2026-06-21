@@ -1,24 +1,14 @@
 ---
-# An instance of the Contact widget.
 widget: contact
-
-active: false
-
-# This file represents a page section.
+active: true
 headless: true
-
-# Order that this section appears on the page.
-weight: 130
-
+weight: 100
 title: Contact
-subtitle: ""
-
+subtitle:
 content:
-  # Automatically link email and phone or display as text?
-  autolink: true
-  # Contact details (edit or remove options as required)
-  email: simon.gravelle@cnrs.fr
-
-design:
-  columns: '2'
+  email: mobina@iastate.edu
+  address:
+    city: Ames
+    region: IA
+    country: United States
 ---

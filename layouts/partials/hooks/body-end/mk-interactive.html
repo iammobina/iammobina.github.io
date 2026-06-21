@@ -1,0 +1,71 @@
+<script>
+(function () {
+  "use strict";
+  document.documentElement.classList.add("js");
+  document.body.classList.remove("dark");
+  try { localStorage.setItem("wcTheme", "0"); } catch (e) {}
+
+  var revealEls = document.querySelectorAll("[data-reveal]");
+  if (revealEls.length && "IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("mk-revealed");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -30px 0px" }
+    );
+    revealEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add("mk-revealed"); });
+  }
+
+  var navLinks = document.querySelectorAll(".navbar .nav-link[href^='#']");
+  var sections = [];
+  navLinks.forEach(function (link) {
+    var id = link.getAttribute("href").slice(1);
+    var section = document.getElementById(id);
+    if (section) sections.push({ id: id, link: link, section: section });
+  });
+
+  if (sections.length) {
+    var onScroll = function () {
+      var scrollY = window.scrollY + 120;
+      var current = sections[0].id;
+      sections.forEach(function (item) {
+        if (item.section.offsetTop <= scrollY) current = item.id;
+      });
+      sections.forEach(function (item) {
+        item.link.classList.toggle("active", item.id === current);
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  document.querySelectorAll(".mk-filter-bar").forEach(function (bar) {
+    var grid = bar.nextElementSibling;
+    if (!grid || !grid.classList.contains("mk-filterable")) return;
+
+    bar.addEventListener("click", function (e) {
+      var btn = e.target.closest(".mk-filter-btn");
+      if (!btn) return;
+
+      bar.querySelectorAll(".mk-filter-btn").forEach(function (b) {
+        b.classList.remove("active");
+      });
+      btn.classList.add("active");
+
+      var filter = btn.dataset.filter;
+      grid.querySelectorAll(".mk-card[data-category]").forEach(function (card) {
+        var cats = (card.dataset.category || "").split(/\s+/);
+        var show = filter === "all" || cats.indexOf(filter) !== -1;
+        card.classList.toggle("mk-hidden", !show);
+      });
+    });
+  });
+})();
+</script>

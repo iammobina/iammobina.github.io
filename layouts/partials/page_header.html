@@ -61,8 +61,6 @@
 <div class="article-container pt-3">
   <h1 class="page-title">{{ $title | markdownify | emojify }}</h1>
 
-  {{ partial "header_maincodefolding" . }}
-  
   {{ with $page.Params.subtitle }}
   <p class="page-subtitle">{{ . | markdownify | emojify }}</p>
   {{end}}
@@ -95,7 +93,6 @@
   {{end}}
 
   {{ if not .IsNode }}
-    {{ partial "header_maincodefolding" . }}
     {{ partial "page_metadata" (dict "page" $page "is_list" 0 "share" true) }}
     {{ partial "page_links_div.html" $page }}
   {{end}}

@@ -1,7 +1,9 @@
 ---
-# Homepage
 type: widget_page
-
-# Homepage is headless, other widget pages are not.
 headless: true
+title: Mobina Kashaniyan
+summary: Mobina Kashaniyan — Ph.D. student in Computer Science at Iowa State University. Research in HPC, applied AI, LLMs, and optimization.
+sitemap:
+  priority: 1.0
+  changefreq: weekly
 ---

@@ -1,0 +1,80 @@
+{{ $isHome := .IsHome }}
+{{ $isPub := eq .Section "publications" }}
+
+<meta name="author" content="Mobina Kashaniyan">
+<meta name="keywords" content="Mobina Kashaniyan{{ if $isPub }}, {{ .Title }}{{ end }}, Iowa State University, Computer Science, high-performance computing, large language models, applied AI, optimization, PerfMamba, machine learning, publications">
+
+<link rel="me" href="https://scholar.google.com/citations?user=WcGHM0sAAAAJ">
+<link rel="me" href="https://github.com/iammobina">
+
+{{ if $isHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "name": "Mobina Kashaniyan — Academic Homepage",
+  "description": {{ site.Params.marketing.seo.description | jsonify }},
+  "url": {{ site.BaseURL | jsonify }},
+  "mainEntity": {
+    "@type": "Person",
+    "@id": {{ printf "%s#person" site.BaseURL | jsonify }},
+    "name": "Mobina Kashaniyan",
+    "givenName": "Mobina",
+    "familyName": "Kashaniyan",
+    "jobTitle": "Ph.D. Student in Computer Science",
+    "email": "mobina@iastate.edu",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ames",
+      "addressRegion": "IA",
+      "addressCountry": "United States"
+    },
+    "url": {{ site.BaseURL | jsonify }},
+    "image": {{ printf "%sauthors/admin/avatar.jpg" site.BaseURL | jsonify }},
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Iowa State University",
+      "url": "https://www.iastate.edu/"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Iran University of Science and Technology"
+    },
+    "knowsAbout": [
+      "High-Performance Computing",
+      "Applied Artificial Intelligence",
+      "Large Language Models",
+      "Optimization",
+      "Efficient AI Systems",
+      "Scalable Machine Learning"
+    ],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=WcGHM0sAAAAJ",
+      "https://github.com/iammobina"
+    ]
+  }
+}
+</script>
+{{ end }}
+
+{{ if $isPub }}
+{{ $authors := slice }}
+{{ range .Params.authors }}
+  {{ $authors = $authors | append (replaceRE "\\*\\*" "" .) }}
+{{ end }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ with .Params.abstract }}{{ . | jsonify }}{{ else }}{{ .Summary | jsonify }}{{ end }},
+  "datePublished": {{ .Date.Format "2006-01-02" | jsonify }},
+  "author": {{ $authors | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "mainEntityOfPage": {{ .Permalink | jsonify }}
+  {{ with .Params.doi }},
+  "identifier": "https://doi.org/{{ . }}"
+  {{ end }}
+}
+</script>
+{{ end }}

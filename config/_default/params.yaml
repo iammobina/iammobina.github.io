@@ -12,7 +12,7 @@ marketing:
   analytics:
     google_analytics: ''
   verification:
-    google: ''
+    google: 'ee0623939f2f77af'
 
 header:
   navbar:
